@@ -1,0 +1,70 @@
+@font-face {
+	font-family: "american-captain";
+	src: url('../font/american_captain.ttf');
+}
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	font-family: "american-captain";
+}
+body {
+	background-image: radial-gradient(#000, #666);
+	text-align: center;
+}
+.container {
+	width: 100vw;
+	height: 100vh;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	position: relative;
+}
+.canvas {
+	border: 1px #0f0 solid;
+	background-color: #000;
+	box-shadow: rgba(180, 180, 180, 1) 0px 0px 35px;
+	position: absolute;
+	width: 90vh;
+	height: 90vh;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.score {
+	margin-bottom: 50px;
+	text-align: left;
+	color: #ff0;
+	font-size: 36pt;
+	text-shadow: #000 0px 0px 5px,
+				 #fff 0px 0px 6px;
+	width: 452px;
+	display: inline-block;
+	position: absolute;
+	/* top: 0; */
+	bottom: 5%;
+	left: 5%;
+	/* right: 0; */
+	margin: auto;
+}
+.title {
+	font-size: 80px;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 50px;
+	color: #f0f;
+	text-shadow: #f80 0px 1px 0px,
+				 #d60 0px 2px 0px,
+				 #b40 1px 3px 0px,
+				 #920 1px 4px 0px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 5%;
+	/* right: 0; */
+	margin: auto;
+}
