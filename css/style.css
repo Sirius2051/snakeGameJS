@@ -9,7 +9,11 @@
 	font-family: "american-captain";
 }
 body {
-	background-image: radial-gradient(#000, #666);
+	background: rgb(102,94,82);
+	background: -moz-radial-gradient(circle, rgba(102,94,82,1) 60%, rgba(51,33,28,1) 100%);
+	background: -webkit-radial-gradient(circle, rgba(102,94,82,1) 60%, rgba(51,33,28,1) 100%);
+	background: radial-gradient(circle, rgba(102,94,82,1) 60%, rgba(51,33,28,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#665e52",endColorstr="#33211c",GradientType=1);
 	text-align: center;
 }
 .container {
@@ -22,7 +26,7 @@ body {
 	position: relative;
 }
 .canvas {
-	border: 1px #0f0 solid;
+	border: 1px #243757 solid;
 	background-color: #000;
 	box-shadow: rgba(180, 180, 180, 1) 0px 0px 35px;
 	position: absolute;
@@ -38,7 +42,7 @@ body {
 .score {
 	margin-bottom: 50px;
 	text-align: left;
-	color: #ff0;
+	color: #f5eec3;
 	font-size: 36pt;
 	text-shadow: #000 0px 0px 5px,
 				 #fff 0px 0px 6px;
@@ -51,18 +55,32 @@ body {
 	/* right: 0; */
 	margin: auto;
 }
+.best {
+	margin-bottom: 50px;
+	text-align: left;
+	color: #f5eec3;
+	font-size: 36pt;
+	text-shadow: #000 0px 0px 5px,
+				 #fff 0px 0px 6px;
+	width: 452px;
+	display: inline-block;
+	position: absolute;
+	/* top: 0; */
+	bottom: 15%;
+	left: 5%;
+	/* right: 0; */
+	margin: auto;
+}
 .title {
 	font-size: 80px;
 	text-align: center;
 	text-transform: uppercase;
 	margin-top: 50px;
-	color: #f0f;
-	text-shadow: #f80 0px 1px 0px,
-				 #d60 0px 2px 0px,
-				 #b40 1px 3px 0px,
-				 #920 1px 4px 0px;
+	color: #f5eec3;
+	text-shadow: #000 0px 0px 5px,
+				 #fff 0px 0px 6px;
 	position: absolute;
-	top: 0;
+	top: 5%;
 	bottom: 0;
 	left: 5%;
 	/* right: 0; */

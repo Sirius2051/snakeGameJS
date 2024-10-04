@@ -1,12 +1,13 @@
 // Globals
 var speed = 120,
-	size = 15,
+	size = 25,
 	x = true,
 	y = true,
 	xd = 0,
 	yd = 0,
 	score = 0,
 	score_text = "Score: ";
+	last_score_text = "Last Score: ";
 // Obj class to universal properties and methods
 class Obj {
 	constructor() {
@@ -36,7 +37,7 @@ class Snake extends Obj {
 		if(this.next != null) {
 			this.next.draw(ctx);
 		}		
-		ctx.fillStyle = '#f00';
+		ctx.fillStyle = '#ae0c3e';
 		ctx.fillRect(this.x, this.y, this.size, this.size);
 	}
 	axes(x, y) {
@@ -82,7 +83,7 @@ class Food extends Obj
 		this.y = this.py();
 	}
 	draw(ctx) {
-		ctx.fillStyle = '#00f';
+		ctx.fillStyle = '#3a5f6f';
 		ctx.fillRect(this.x, this.y, this.size, this.size);
 	}
 }
@@ -131,10 +132,12 @@ function gameOver() {
 	yd = 0;
 	x = true;
 	y = true;
+	localStorage.setItem("score", score);
 	score = 0;
 	snake = new Snake(canvas.width/2, canvas.height/2);
 	food = new Food();
 	document.getElementById('score').innerHTML = score_text + score;
+	document.getElementById('best').innerHTML = last_score_text + localStorage.getItem("score");
 }
 function clashBody() {
 	var temp = null;
@@ -173,7 +176,7 @@ function draw() {
 	}
 	snake.draw(ctx);
 	food.draw(ctx);
-	ctx.strokeStyle = '#0f0';
+	ctx.strokeStyle = '#243757';
 	ctx.stroke();
 }
 // Main function
